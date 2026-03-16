@@ -36,6 +36,7 @@ I decided how a bug was fixed by looking at both pytest and manually looking thr
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 - What change did you make that finally gave the game a stable secret number?
 
+Sl kept on changing the secret number because it goes based off the session state. This meant the session state was getting reset, so a new secret formed, instead of it retaining its original. Streamlit runs the full script everytime the user reacts with the website on the frontend, this can in turn cause sl to reset again and again, causing major issues. Session state is like the memory, or scorecard that holds all of the user's history of the game. I added a line that restricted the secret within a range, which in turn added another line that held secret as a constant variable that can't have its value changed until new game.
 ---
 
 ## 5. Looking ahead: your developer habits
@@ -44,3 +45,5 @@ I decided how a bug was fixed by looking at both pytest and manually looking thr
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+I definetely want to learn on how to use testings better mainly because they are very useful in sectioning a game/code and fixing it properly one by one so the whole game does not need to be done for this to work. Next time, I would focus on having copilot has a full understanding of my UI better and have it align better to the type of questions I'm asking. This project showed me that AI is smarter than I thought it was for code. It gets a gist of what I'm trying to achieve but isn't completely accurate. As such I need to check the code a little bit more, but since it knows my intent to a certain level, I don't need to code this out and can definetely save more time. It makes sense how AI helps with productivity. 

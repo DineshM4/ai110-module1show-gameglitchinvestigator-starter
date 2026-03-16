@@ -25,14 +25,15 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [ The Purpose of the game is for the User to guess the number the computer generated from a range given by the difficulty] Describe the game's purpose.
+- [Bugs I found include hint system not working properly, secret being stored as a string sometimes, and the range of secret not changing when difficulty changes] Detail which bugs you found.
+- [ Firstly, we changed the wording using AI so that hint system is no longer misleading. Then we changed a specific line that changed the secret from containing default range to the range given by difficulty. Finally, we typecasted the secret in all cases so that it is always an int, so no comparison errors occur] Explain what fixes you applied.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- [ ![alt text](image.png)] [Insert a screenshot of your fixed, winning game here]
 
 ## 🚀 Stretch Features
 
 - [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+![alt text](image-1.png) For Challenge 1: Advanced Edge-Case Testing
