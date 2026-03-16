@@ -50,11 +50,13 @@ def check_guess(guess, secret):
             return "Too High", " 📉Go LOWER!"
         else:
             return "Too Low", " 📈Go HIGHER!"
+    # FIXME: If types are different, we should compare as Ints
+    # FIX: Changed both guess and secret to ints to ensure that we are comparing the actual values and not just the string representations, which can lead to incorrect hints.
     except TypeError:
-        g = str(guess)
-        if g == secret:
+        g = int(guess)
+        if g == int(secret):
             return "Win", "🎉 Correct!"
-        if g > secret:
+        if g > int(secret):
             return "Too High", "📉 Go LOWER!"
         return "Too Low", "📈 Go HIGHER!"
 
